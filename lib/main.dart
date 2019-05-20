@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'random_state.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Private Zone',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -18,9 +19,10 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.red,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      //home: MyHomePage(title: 'Private Zone'),
+      home: RandomWords(),
     );
   }
 }
@@ -92,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'You have pushed the button this many times:',
+              '已点击次数:',
             ),
             Text(
               '$_counter',
@@ -103,8 +105,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
+        tooltip: '+1',
+        child: Icon(Icons.plus_one),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
