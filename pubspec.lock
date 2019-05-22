@@ -53,6 +53,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  intl:
+    dependency: "direct main"
+    description:
+      name: intl
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.15.8"
   matcher:
     dependency: transitive
     description:
@@ -81,6 +88,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.5.0"
+  provider:
+    dependency: "direct main"
+    description:
+      name: provider
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.0.1"
   quiver:
     dependency: transitive
     description:
