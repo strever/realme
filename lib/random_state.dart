@@ -17,7 +17,7 @@ class RandomWordsState extends State<RandomWords> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: Text('真材实料的我'),
+        title: Text('Notes'),
         actions: <Widget>[
           new IconButton(icon: Icon(Icons.list), onPressed: _fetchFavorites)
         ],

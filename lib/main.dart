@@ -1,24 +1,23 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/services.dart';
 
-import 'Home.dart';
+import 'home.dart';
 
 void main() {
 
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown
-  ]);
+//  SystemChrome.setPreferredOrientations([
+//    DeviceOrientation.portraitUp,
+//    DeviceOrientation.portraitDown
+//  ]);
 
-  return runApp(RealMeApp());
+  return runApp(MarkdownNoteApp());
 }
 
-class RealMeApp extends StatelessWidget {
+class MarkdownNoteApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return CupertinoApp(
-      title: 'Private Zone',
+      title: 'Markdown Note',
       home: HomePage(),
     );
   }
