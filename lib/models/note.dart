@@ -35,12 +35,26 @@ class Note {
     Database db = await dbProvider();
     int id = 0;
     if (this.id != null && this.id > 0) {
-      id = await db.rawInsert(
-          'UPDATE ${table} SET id = ${this.id}, title = "${this.title}", note = "${this.note}", synced = ${this.synced}, deleted = ${this.deleted}, synced_at = "${this.syncedAt}", created_at = "${this.createdAt}", updated_at = "${this.updatedAt}" WHERE id = ${this.id}');
+      id = await db.update(table, {
+        "id": this.id,
+        "title": this.title,
+        "note": this.note,
+        "synced": this.synced,
+        "deleted": this.deleted,
+        "synced_at": this.syncedAt,
+        "created_at": this.createdAt,
+        "updated_at": this.updatedAt,
+      }, where: "id = ${this.id}");
     } else {
-      id = await db.rawInsert(
-          'INSERT INTO ${table} (title, note, synced, deleted, synced_at, created_at, updated_at)'
-          ' VALUES("${this.title}","${this.note}","${this.synced}", "${this.deleted}", "${this.syncedAt}", "${this.createdAt}", "${this.updatedAt}")');
+      id = await db.insert(table, {
+        "title": this.title,
+        "note": this.note,
+        "synced": this.synced,
+        "deleted": this.deleted,
+        "synced_at": this.syncedAt,
+        "created_at": this.createdAt,
+        "updated_at": this.updatedAt,
+      });
     }
     //await db.close();
 
