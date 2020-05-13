@@ -6,8 +6,6 @@ _一款使用flutter打造的跨平台应用_
 
 # Flutter打造跨平台应用
 
-- [方永祥]<FANGYONGXIANG325@pingan.com.cn>
-
 - [x] Cupertino
 - [x] Material
 
